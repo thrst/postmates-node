@@ -18,6 +18,13 @@ var postmates = new Postmates('yourCustomerId', 'yourAPIkey');
 
 ### Examples
 
+Get delivery zones:
+```javascript
+postmates.zones(function(err, res) {
+  console.log(res.body); // [ zones ]
+});
+```
+
 Get a quote:
 ```javascript
 var delivery = {
