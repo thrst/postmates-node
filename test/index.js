@@ -25,7 +25,7 @@ describe('Postmates', function () {
     it('should GET "delivery_zones"', function (done) {
       postmates.zones(function (err, zones) {
         expect(request.get).to.be.called;
-        expect(request.get.firstCall.args[0]).to.match(/delivery_zones$/);
+        expect(request.get.firstCall.args[0]).to.match(/\/v1\/delivery_zones$/);
         done();
       });
     });
